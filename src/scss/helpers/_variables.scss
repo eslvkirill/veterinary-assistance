@@ -1,0 +1,53 @@
+// Base
+$min-width: 100vw;
+$min-height: 100vh;
+$font-family: "Comic Sans MS", arial;
+$font-size: 16px;
+$line-height: 1.5;
+$primary-color: var(--black);
+$primary-bg-color: var(--white);
+
+// Header
+$header-search-btn-bg-color: var(--light-blue-300);
+$header-search-btn-hover-bg-color: var(--light-blue-400);
+$header-add-btn-bg-color: var(--green-300);
+$header-add-btn-hover-bg-color: var(--green-400);
+
+// Product table
+$product-table-border: 2px solid var(--black);
+$product-table-data-count-color: var(--white);
+$product-table-data-count-bg-color: var(--grey-500);
+$product-table-delete-btn-bg-color: var(--red-600);
+$product-table-delete-btn-hover-bg-color: var(--red-700);
+$product-table-edit-btn-bg-color: var(--orange-600);
+$product-table-edit-btn-hover-bg-color: var(--orange-700);
+
+// Modal
+$modal-border: $product-table-border;
+$modal-bg-color: var(--grey-100);
+$modal-close-btn-bg-color: $product-table-delete-btn-bg-color;
+$modal-close-btn-hover-bg-color: $product-table-delete-btn-hover-bg-color;
+$modal-add-btn-bg-color: $header-add-btn-bg-color;
+$modal-add-btn-hover-bg-color: $header-add-btn-hover-bg-color;
+$modal-update-btn-bg-color: $product-table-edit-btn-bg-color;
+$modal-update-btn-hover-bg-color: $product-table-edit-btn-hover-bg-color;
+
+// Button
+$button-bg-color: var(--black);
+$button-color: var(--white);
+$button-box-shadow-color: var(--grey-900);
+
+// Vertical line
+$vertical-line-bg-color: var(--grey-600);
+
+// Loader
+$loader-first-line-color: var(--purple-700);
+$loader-second-line-color: var(--orange-900);
+$loader-third-line-color: var(--purple-200);
+
+// Modal delete
+$modal-delete-border: $product-table-border;
+$modal-delete-button-yes-bg-color: $header-add-btn-bg-color;
+$modal-delete-button-yes-hover-bg-color: $header-add-btn-hover-bg-color;
+$modal-delete-button-no-bg-color: $product-table-edit-btn-bg-color;
+$modal-delete-button-no-hover-bg-color: $product-table-edit-btn-hover-bg-color;

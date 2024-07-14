@@ -1,0 +1,40 @@
+@use '../helpers/variables' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  pointer-events: none;
+
+  .search-section {
+    &__input {
+      width: 405px;
+      margin-right: 5px;
+    }
+
+    &__button {
+      width: 100px;
+      background-color: $header-search-btn-bg-color;
+
+      &:hover {
+        background-color: $header-search-btn-hover-bg-color;
+      }
+    }
+  }
+
+  &__button {
+    &_value {
+      &_add {
+        width: 140px;
+        background-color: $header-add-btn-bg-color;
+
+        &:hover {
+          background-color: $header-add-btn-hover-bg-color;
+        }
+      }
+    }
+  }
+}

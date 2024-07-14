@@ -1,0 +1,23 @@
+.input {
+  padding: 9px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+
+  &::-ms-clear,
+  &::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+}

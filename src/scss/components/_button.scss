@@ -1,0 +1,26 @@
+@use '../helpers/variables' as *;
+
+.button {
+  height: fit-content;
+  padding: 9px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.15rem;
+  color: $button-color;
+  background-color: $button-bg-color;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 5px $button-box-shadow-color, 0 3px 3px $button-box-shadow-color;
+
+  &:hover {
+    transition: 0.3s;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

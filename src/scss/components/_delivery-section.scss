@@ -1,0 +1,45 @@
+.delivery-section {
+  &__label {
+    width: 100%;
+    margin-bottom: 7px;
+  }
+
+  &__options-delivery {
+    height: 38px;
+    border: 2px solid #6d6d6d;
+    border-radius: 5px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__radio-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-right: 35px;
+    border-radius: 5px;
+    width: 103px;
+    border: 2px solid #6d6d6d;
+  }
+
+  &__cities-select {
+    width: 176px;
+    border-radius: 5px;
+  }
+}
+
+.options-delivery {
+  cursor: pointer;
+
+  &__item {
+    &:last-child {
+      &:disabled {
+        background-color: #6d6d6d;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

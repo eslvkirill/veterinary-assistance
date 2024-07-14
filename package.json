@@ -1,0 +1,31 @@
+{
+  "name": "darya",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.prod.js",
+    "start": "webpack serve --config config/webpack.dev.js --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "sass": "^1.77.8",
+    "sass-loader": "^14.2.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "webpack-merge": "^6.0.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

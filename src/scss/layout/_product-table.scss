@@ -1,0 +1,133 @@
+@use '../helpers/variables' as *;
+@use '../helpers/keyframes' as *;
+
+.product-table {
+  width: 100%;
+  margin-bottom: 70px;
+  border: $product-table-border;
+  border-collapse: collapse;
+  animation: loadTable 0.5s ease-in-out;
+
+  &__row {
+    height: 75px;
+    border: $product-table-border;
+  }
+
+  &__data {
+    border: $product-table-border;
+
+    &_several-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 30px;
+      height: inherit;
+      border: none;
+    }
+  }
+
+  .data {
+    text-align: center;
+
+    &__checkbox-input {
+      vertical-align: middle;
+      cursor: pointer;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      background-image: url("../assets/triangle.svg");
+    }
+
+    &__count {
+      padding: 10px;
+      border-radius: 18px;
+      color: $product-table-data-count-color;
+      background-color: $product-table-data-count-bg-color;
+    }
+
+    &__triangle-image {
+      position: absolute;
+      appearance: none;
+    }
+
+    &__buttons-section {
+      margin: 0;
+      justify-content: space-evenly;
+    }
+
+    &__button {
+      width: 100px;
+
+      &_value {
+        &_delete {
+          background-color: $product-table-delete-btn-bg-color;
+
+          &:hover {
+            background-color: $product-table-delete-btn-hover-bg-color;
+          }
+        }
+
+        &_edit {
+          background-color: $product-table-edit-btn-bg-color;
+
+          &:hover {
+            background-color: $product-table-edit-btn-hover-bg-color;
+          }
+        }
+      }
+    }
+  }
+
+  .headline-data {
+    height: 80px;
+
+    &__image {
+      vertical-align: middle;
+      height: 38%;
+      padding-left: 1.2em;
+      transform: scale(1, -1);
+    }
+
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &_value {
+      &_first-column {
+        width: 43%;
+
+        .headline-data {
+          &__name {
+            margin-right: 17%;
+          }
+
+          &__image {
+            margin-right: 16.3%;
+          }
+        }
+      }
+
+      &_second-column {
+        .headline-data {
+          &__name {
+            margin-right: 1%;
+          }
+
+          &__image {
+            margin-right: 22%;
+          }
+        }
+      }
+
+      &_first-column,
+      &_second-column {
+        text-align: end;
+      }
+
+      &_third-column {
+        width: 36%;
+      }
+    }
+  }
+}

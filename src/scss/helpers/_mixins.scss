@@ -1,0 +1,13 @@
+@use '../base/design-system/' as *;
+
+:root {
+  @each $color, $shades in $colors {
+    @if ($color == black or $color == white or $color == transparent) {
+      --#{"" + $color}: #{$shades};
+    } @else {
+      @each $shade, $value in $shades {
+        --#{"" + $color}-#{"" + $shade}: #{$value};
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use '../helpers/variables' as *;
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: $min-width;
+  min-height: $min-height;
+  margin-top: 100px;
+  font-family: $font-family;
+  color: $primary-color;
+  background-color: $primary-bg-color;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('@/assets/dog-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: $line-height;
+  overflow-x: hidden;
+}
