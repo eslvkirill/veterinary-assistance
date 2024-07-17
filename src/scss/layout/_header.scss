@@ -1,38 +1,52 @@
 @use '../helpers/variables' as *;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1000px;
-  font-size: 1.2rem;
-  margin-bottom: 22px;
-  pointer-events: none;
+  margin-right: 10%;
+  font-size: 1.3rem;
 
-  .search-section {
-    &__input {
-      width: 405px;
-      margin-right: 5px;
-    }
+  .navigation {
+    ul {
+      font-family: 'Exo', sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: flex-end;
+      max-width: 1500px;
 
-    &__button {
-      width: 100px;
-      background-color: $header-search-btn-bg-color;
+      li {
+        list-style: none;
+        position: relative;
+        padding: 16px 55px 0;
 
-      &:hover {
-        background-color: $header-search-btn-hover-bg-color;
-      }
-    }
-  }
+        a {
+          transition: 0.3s ease;
+          text-decoration: none;
+          text-shadow: 0 0 0 #be6037, 0 0 0 #9b4724, 0 0 0 #be6037;
+          font-weight: bold;
+          letter-spacing: 0.02rem;
+          transition: 0.3s ease;
+          box-shadow: 1px 5px 10px -5px black;
+          padding: 15px 41px;
+          cursor: pointer;
+          background: #dbf7f8;
+          color: #bd5a31;
 
-  &__button {
-    &_value {
-      &_add {
-        width: 140px;
-        background-color: $header-add-btn-bg-color;
+          &:active {
+            color: #dbf7f8;
+            transform: scale(0.98);
+          }
+        }
 
         &:hover {
-          background-color: $header-add-btn-hover-bg-color;
+          a {
+            background-color: #bd5a31;
+            color: #fceddc;
+            text-shadow: none;
+
+            &:active {
+              color: #dbf7f8;
+              transform: scale(0.98);
+            }
+          }
         }
       }
     }

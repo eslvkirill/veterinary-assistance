@@ -1,26 +1,54 @@
 @use '../helpers/variables' as *;
 
 .button {
-  height: fit-content;
-  padding: 9px 24px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.15rem;
-  color: $button-color;
-  background-color: $button-bg-color;
-  transition: 0.3s;
+  padding: 13px 47px;
+  font-weight: bold;
+  display: block;
   cursor: pointer;
-  box-shadow: 0 4px 5px $button-box-shadow-color, 0 3px 3px $button-box-shadow-color;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  min-width: 8.5rem;
+  color: #fceddc;
+  transition: 0.3s;
+
+  box-shadow: 0 4px 5px $button-box-shadow-color,
+    0 3px 3px $button-box-shadow-color;
 
   &:hover {
     transition: 0.3s;
   }
 
-  &:active {
-    transform: scale(0.98);
+  &:focus {
+    outline: none;
   }
 
-  &:disabled {
-    cursor: not-allowed;
+  &:active {
+    box-shadow: inset 2px 2px 1px #0000004d;
+    transform: scale(0.98);
+  }
+}
+
+.primary {
+  background: #db6736;
+  border: 2px solid #db6736;
+
+  &:hover {
+    color: #db6736;
+    background: none;
+    border: 2px solid #db6736;
+  }
+}
+
+.secondary {
+  color: #db6736;
+  border: 2px solid #db6736;
+
+  &:hover {
+    background: #db6736;
+    color: #fceddc;
   }
 }

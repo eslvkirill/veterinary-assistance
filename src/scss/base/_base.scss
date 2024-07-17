@@ -2,6 +2,7 @@
 
 html {
   font-size: $font-size;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,16 +11,283 @@ body {
   align-items: center;
   min-width: $min-width;
   min-height: $min-height;
-  margin-top: 100px;
   font-family: $font-family;
   color: $primary-color;
   background-color: $primary-bg-color;
   width: 100vw;
   height: 100vh;
-  background-image: url('@/assets/dog-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url('@/assets/dog-bg.png') center/100% 100% no-repeat;
   line-height: $line-height;
   overflow-x: hidden;
+  animation: loadStartScreen 1.5s ease-in-out;
+
+  &::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #d1754e;
+    box-shadow: inset 0 0 6px #00000066;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background: #dbf7f8;
+  }
+}
+
+.assumption {
+  &__title {
+    width: 48%;
+    margin: 4% 0 0 13%;
+    font-size: 5.5rem;
+    line-height: 6rem;
+
+    &_city {
+      font-size: 2.6rem;
+      font-weight: normal;
+      font-style: italic;
+    }
+  }
+
+  &__description {
+    width: 45%;
+    font-size: 1.4rem;
+    letter-spacing: 0.06rem;
+    margin: 3% 0 4% 13%;
+  }
+
+  &__actions {
+    margin: 0 0 2% 13%;
+    display: flex;
+
+    &_write-btn {
+      margin-left: 35px;
+    }
+  }
+
+  &__icons {
+    margin: 4.5% 0 3% 13%;
+    display: flex;
+
+    &_image {
+      margin-right: 5px;
+      width: 80px;
+    }
+
+    &_text {
+      width: 50%;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.services {
+  &__title {
+    margin: auto 0 3% 13%;
+    text-decoration: underline;
+    text-decoration-color: #db6700e0;
+    font-size: 4rem;
+  }
+
+  &__items {
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    width: 480px;
+    margin: 0 80px 52px 0;
+
+    &_image {
+      width: 70px;
+      height: fit-content;
+      margin: 14px 7px 0 0;
+    }
+  }
+
+  &__card {
+    &-title {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    &-price {
+      margin: 0;
+      margin: 0 0 0 4px;
+      color: #db6700e0;
+      font-size: 1.3rem;
+      text-shadow: 1px 0px #dbf7f8;
+    }
+
+    &-btn {
+      width: 32%;
+      padding: 9px 42px;
+    }
+  }
+
+  &__surgery {
+    .services {
+      &__item {
+        &_image {
+          transform: rotate(339deg);
+          width: auto;
+          height: 136px;
+          margin-right: 36px;
+        }
+      }
+    }
+  }
+
+  &__consultation {
+    .services {
+      &__card {
+        &-title {
+          line-height: 2.5rem;
+        }
+
+        &-sub-title {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &__euthanasia {
+    .services {
+      &__item {
+        &_image {
+          position: relative;
+          right: 18px;
+          bottom: 7px;
+          transform: rotate(17deg);
+        }
+      }
+    }
+
+    .button {
+      margin-top: 15px;
+    }
+  }
+
+  &__consultation {
+    .button {
+      margin-top: 15px;
+    }
+  }
+
+  &__dermatology {
+    .services {
+      &__item {
+        &_image {
+          margin-left: -16px;
+        }
+      }
+    }
+  }
+
+  .button {
+    padding: 8px 38px;
+  }
+}
+
+.reviews {
+  &__title {
+    margin: 1% 0 1% 13%;
+    text-decoration: underline;
+    text-decoration-color: #db6700e0;
+    font-size: 4rem;
+  }
+
+  &__items {
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 750px;
+    font-size: 1.2rem;
+
+    &__img {
+      height: 90px;
+    }
+  }
+}
+
+.contacts {
+  &__title {
+    margin: 4% 0 1% 13%;
+    text-decoration: underline;
+    text-decoration-color: #db6700e0;
+    font-size: 4rem;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    margin-bottom: 10vh;
+
+    .div-tel {
+      position: relative;
+      top: 32px;
+      left: 40px;
+      z-index: -1;
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.4rem;
+
+      .tel {
+        width: 32px;
+      }
+
+      .links {
+        margin-top: 65px;
+        display: flex;
+        flex-direction: row;
+
+        a {
+          margin-right: 30px;
+        }
+
+        .vk {
+          svg {
+            margin-right: 17px;
+          }
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .icon {
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 500px;
+  }
 }
