@@ -19,7 +19,10 @@ body {
   background: url('@/assets/dog-bg.png') center/100% 100% no-repeat;
   line-height: $line-height;
   overflow-x: hidden;
-  animation: loadStartScreen 1.5s ease-in-out;
+
+  @include media(large) {
+    background: url('@/assets/dog-bg.png') no-repeat;
+  }
 
   &::-webkit-scrollbar {
     width: 11px;

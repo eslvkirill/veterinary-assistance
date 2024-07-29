@@ -4,6 +4,10 @@
   padding-top: 8vh;
   height: 82vh;
 
+  @include media(large) {
+    height: auto;
+  }
+
   &__title {
     width: 48%;
     min-width: 615px;
