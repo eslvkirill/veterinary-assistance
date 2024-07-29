@@ -14,6 +14,12 @@
   }
 
   &__telegram {
+    .contacts {
+      &__caption {
+        text-decoration: none;
+      }
+    }
+
     .icon {
       color: #53a1ef;
     }
