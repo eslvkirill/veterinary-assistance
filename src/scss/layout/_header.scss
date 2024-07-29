@@ -1,10 +1,23 @@
-@use '../helpers/variables' as *;
+@use '../helpers' as *;
 
 .header {
-  margin-right: 10%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
   font-size: 1.3rem;
 
-  .navigation {
+  @include media(large-xl) {
+    font-size: 1.1rem;
+  }
+
+  &__navigation {
+    margin-left: 11%;
+
+    @include media(large-xl) {
+      margin-left: 2%;
+    }
+
     ul {
       font-family: 'Exo', sans-serif;
       text-transform: uppercase;
@@ -17,8 +30,11 @@
         position: relative;
         padding: 16px 55px 0;
 
+        @include media(large-xl) {
+          padding: 16px 35px 0;
+        }
+
         a {
-          transition: 0.3s ease;
           text-decoration: none;
           text-shadow: 0 0 0 #be6037, 0 0 0 #9b4724, 0 0 0 #be6037;
           font-weight: bold;
@@ -30,16 +46,19 @@
           background: #dbf7f8;
           color: #bd5a31;
 
+          background-color: #bd5a31;
+          color: #fceddc;
+
           &:active {
             color: #dbf7f8;
-            transform: scale(0.98);
+            transform: scale(0.9);
           }
         }
 
         &:hover {
           a {
-            background-color: #bd5a31;
-            color: #fceddc;
+            background: #dbf7f8;
+            color: #bd5a31;
             text-shadow: none;
 
             &:active {
@@ -47,6 +66,85 @@
               transform: scale(0.98);
             }
           }
+        }
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: flex-end;
+
+    &_phone {
+      margin-bottom: 6px;
+    }
+
+    .contacts {
+      &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease;
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        &:hover {
+          transform: scale(1);
+
+          .contacts {
+            &__caption {
+              transform: scale(1.05);
+              transition: 0.3s ease;
+
+              &_whats-app {
+                color: #16813e;
+              }
+
+              &_viber {
+                color: #271961;
+              }
+
+              &_phone {
+                transform: scale(1);
+              }
+            }
+
+            &__phone {
+              transition: 0.3s ease;
+              transform: scale(1.02);
+            }
+          }
+
+          .icon {
+            transition: 0.3s ease;
+            transform: scale(1.9);
+          }
+        }
+
+        .icon {
+          margin-bottom: 10px;
+          transition: 0.3s ease;
+        }
+      }
+
+      &__caption {
+        text-decoration: none;
+      }
+
+      &__phone {
+        color: #bd5a31;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.5rem;
+        transition: 0.3s ease;
+
+        @include media(large-xl) {
+          font-size: 1.2rem;
         }
       }
     }

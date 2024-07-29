@@ -1,0 +1,42 @@
+@use '../helpers' as *;
+
+.reviews {
+  &__title {
+    margin: 1% 0 1% 13%;
+    text-decoration: underline;
+    text-decoration-color: #db6700e0;
+    font-size: 4rem;
+  }
+
+  &__items {
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include media(large-xl) {
+      justify-content: space-around;
+    }
+  }
+
+  .review {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 750px;
+    font-size: 1.2rem;
+
+    @include media(large-xl) {
+      font-size: 1.1rem;
+      width: 820px;
+    }
+
+    @include media(large-xxl) {
+      width: 530px;
+    }
+
+    &__img {
+      height: 90px;
+    }
+  }
+}

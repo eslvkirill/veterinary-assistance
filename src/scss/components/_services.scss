@@ -1,0 +1,131 @@
+@use '../helpers' as *;
+
+.services {
+  &__title {
+    margin: auto 0 3% 13%;
+    text-decoration: underline;
+    text-decoration-color: #db6700e0;
+    font-size: 4rem;
+  }
+
+  &__items {
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include media(large-xl) {
+      justify-content: space-evenly;
+    }
+
+    @include media(large-xxl) {
+      justify-content: space-evenly;
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: 460px;
+    margin: 0 80px 52px 0;
+
+    @include media(large-xl) {
+      width: 430px;
+      margin-right: 45px;
+      transform: scale(0.9);
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+
+    &_image {
+      width: 70px;
+      height: fit-content;
+      margin: 14px 7px 0 0;
+    }
+  }
+
+  &__card {
+    &-title {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    &-price {
+      margin: 0;
+      margin: 0 0 0 4px;
+      color: #db6700e0;
+      font-size: 1.3rem;
+      text-shadow: 1px 0px #dbf7f8;
+    }
+
+    &-btn {
+      width: 32%;
+      padding: 9px 42px;
+    }
+  }
+
+  &__surgery {
+    .services {
+      &__item {
+        &_image {
+          transform: rotate(339deg);
+          width: auto;
+          height: 136px;
+          margin-right: 36px;
+        }
+      }
+    }
+  }
+
+  &__consultation {
+    .services {
+      &__card {
+        &-title {
+          line-height: 2.5rem;
+        }
+
+        &-sub-title {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  &__euthanasia {
+    .services {
+      &__item {
+        &_image {
+          position: relative;
+          right: 18px;
+          bottom: 7px;
+          transform: rotate(17deg);
+        }
+      }
+    }
+
+    .button {
+      margin-top: 15px;
+    }
+  }
+
+  &__consultation {
+    .button {
+      margin-top: 15px;
+    }
+  }
+
+  &__dermatology {
+    .services {
+      &__item {
+        &_image {
+          margin-left: -16px;
+        }
+      }
+    }
+  }
+
+  .button {
+    padding: 8px 38px;
+  }
+}

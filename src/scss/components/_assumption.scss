@@ -1,0 +1,79 @@
+@use '../helpers' as *;
+
+.assumption {
+  padding-top: 8vh;
+  height: 82vh;
+
+  &__title {
+    width: 48%;
+    min-width: 615px;
+    margin: 0 0 0 13%;
+    font-size: 5.5rem;
+    line-height: 6rem;
+
+    @include media(large-xl) {
+      font-size: 4rem;
+    }
+
+    &_city {
+      font-size: 2.6rem;
+      font-weight: normal;
+      font-style: italic;
+
+      @include media(large-xl) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__description {
+    width: 45%;
+    font-size: 1.4rem;
+    letter-spacing: 0.06rem;
+    margin: 3% 0 4% 13%;
+
+    @include media(large-xl) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__actions {
+    margin: 0 0 2% 13%;
+    display: flex;
+
+    @include media(large-xl) {
+      margin-left: 9.5%;
+      transform: scale(0.92);
+    }
+
+    &_write-btn {
+      margin-left: 35px;
+    }
+  }
+
+  &__icons {
+    margin: 4.5% 0 3% 13%;
+    display: flex;
+
+    @include media(large-xl) {
+      margin-left: 5%;
+      transform: scale(0.85);
+    }
+
+    &_image {
+      margin-right: 5px;
+      width: 80px;
+    }
+
+    &_text {
+      width: 50%;
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,56 @@
+@use '../helpers' as *;
+
+.contacts {
+  &__whats-app {
+    .icon {
+      color: #25d366;
+    }
+  }
+
+  &__viber {
+    .icon {
+      color: #583fbb;
+    }
+  }
+
+  &__telegram {
+    .icon {
+      color: #53a1ef;
+    }
+  }
+
+  &__vk {
+    .contacts {
+      &__caption {
+        text-decoration: none;
+      }
+    }
+
+    .icon {
+      color: #0077ff;
+    }
+  }
+
+  &__item {
+    text-decoration: none;
+  }
+
+  &__caption {
+    transition: 0.3s ease;
+    color: #414141;
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-color: #db6700e0;
+
+    &_link {
+      text-decoration: underline;
+      text-decoration-color: #db6700e0;
+      font-size: 1.5rem;
+      margin-left: 5px;
+    }
+  }
+
+  .icon {
+    transform: scale(1.8);
+  }
+}

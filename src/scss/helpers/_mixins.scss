@@ -1,5 +1,5 @@
 @use 'breakpoints' as *;
-@use '../base/design-system/' as *;
+@use '../design' as *;
 
 :root {
   @each $color, $shades in $colors {
@@ -16,7 +16,7 @@
 @mixin media($key) {
   $size: map-get($breakpoints, $key);
 
-  @media only screen and (min-width: $size) {
+  @media only screen and (max-width: $size) {
     @content;
   }
 }

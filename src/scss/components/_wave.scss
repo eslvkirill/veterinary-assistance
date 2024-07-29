@@ -1,0 +1,37 @@
+.wave-container {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  transform: rotate(180deg);
+
+  .wave {
+    display: block;
+    position: relative;
+    height: 40px;
+    background: #4ecec3;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 100%;
+      width: 100%;
+      height: 300px;
+      background-color: white;
+      right: -25%;
+      top: 20px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 100%;
+      width: 100%;
+      height: 300px;
+      background-color: #4ecec3;
+      left: -25%;
+      top: -240px;
+    }
+  }
+}

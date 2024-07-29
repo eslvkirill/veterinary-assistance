@@ -1,11 +1,14 @@
 // Base
 $min-width: 100vw;
 $min-height: 100vh;
-$font-family: "Comic Sans MS", arial;
+$font-family: 'Comic Sans MS', arial;
 $font-size: 16px;
 $line-height: 1.5;
 $primary-color: var(--black);
 $primary-bg-color: var(--white);
+
+// Tools
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 
 // Header
 $header-search-btn-bg-color: var(--light-blue-300);
