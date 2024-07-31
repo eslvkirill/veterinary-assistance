@@ -22,6 +22,7 @@ body {
 
   @include media(large) {
     background: url('@/assets/dog-bg.png') no-repeat;
+    background-position-x: -23px;
   }
 
   &::-webkit-scrollbar {

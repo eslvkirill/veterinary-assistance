@@ -4,7 +4,12 @@
   padding-top: 8vh;
   height: 82vh;
 
+  @include media(large-xl) {
+    height: 71vh;
+  }
+
   @include media(large) {
+    padding-top: 0;
     height: auto;
   }
 
@@ -14,15 +19,18 @@
     margin: 0 0 0 13%;
     font-size: 5.5rem;
     line-height: 6rem;
+    text-shadow: -1px -1px 0px #db6700e0;
 
     @include media(large-xl) {
-      font-size: 4rem;
+      font-size: 3.7rem;
+      line-height: normal;
     }
 
     &_city {
       font-size: 2.6rem;
       font-weight: normal;
       font-style: italic;
+      text-shadow: none;
 
       @include media(large-xl) {
         font-size: 1.8rem;

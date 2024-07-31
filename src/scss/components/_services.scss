@@ -2,16 +2,16 @@
 
 .services {
   &__title {
-    margin: auto 0 3% 13%;
+    margin: 6% 0 3% 13%;
     text-decoration: underline;
     text-decoration-color: #db6700e0;
     font-size: 4rem;
   }
 
   &__items {
-    padding: 0 120px;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 
     @include media(large-xl) {
@@ -19,13 +19,13 @@
     }
 
     @include media(large-xxl) {
-      justify-content: space-evenly;
+      justify-content: center;
     }
   }
 
   &__item {
     display: flex;
-    width: 460px;
+    width: 405px;
     margin: 0 80px 52px 0;
 
     @include media(large-xl) {
@@ -105,7 +105,7 @@
     }
 
     .button {
-      margin-top: 15px;
+      margin-top: 40px;
     }
   }
 

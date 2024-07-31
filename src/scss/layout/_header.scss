@@ -7,8 +7,12 @@
   justify-content: space-evenly;
   font-size: 1.3rem;
 
+  @include media(large) {
+    justify-content: flex-end;
+  }
+
   @include media(large-xl) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   &__navigation {
@@ -16,6 +20,11 @@
 
     @include media(large-xl) {
       margin-left: 2%;
+    }
+
+    @include media(large) {
+      margin-left: 0%;
+      margin-bottom: 50px;
     }
 
     ul {
@@ -32,6 +41,10 @@
 
         @include media(large-xl) {
           padding: 16px 35px 0;
+        }
+
+        @include media(large) {
+          padding: 16px 20px 0;
         }
 
         a {
@@ -75,8 +88,23 @@
     display: flex;
     align-items: flex-end;
 
+    @include media(large) {
+      margin-left: 48px;
+      margin-bottom: 50px;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+    @include media(medium-xl) {
+      margin-bottom: 0;
+    }
+
     &_phone {
       margin-bottom: 6px;
+
+      @include media(large) {
+        margin-top: 12px;
+      }
     }
 
     .contacts {
@@ -90,6 +118,10 @@
 
         &:not(:last-child) {
           margin-right: 20px;
+
+          @include media(large) {
+            margin-top: 20px;
+          }
         }
 
         &:hover {

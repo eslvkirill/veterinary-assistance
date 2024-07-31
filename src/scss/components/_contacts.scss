@@ -2,10 +2,14 @@
 
 .contacts {
   &__title {
-    margin: 3% 0 5% 13%;
+    margin: 4% 0 5% 13%;
     text-decoration: underline;
     text-decoration-color: #db6700e0;
     font-size: 4rem;
+
+    @include media(large) {
+      margin-bottom: 8%;
+    }
   }
 
   &__wrapper {
@@ -14,12 +18,21 @@
     justify-content: space-evenly;
     width: 90%;
     margin-bottom: 10vh;
+
+    @include media(large) {
+      width: 100%;
+      margin-bottom: 5vh;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     font-size: 1.4rem;
+
+    @include media(large) {
+      font-size: 1.2rem;
+    }
 
     .icon {
       width: 37px;
@@ -66,6 +79,10 @@
     display: flex;
     flex-direction: column;
     transform: scale(1.18);
+
+    @include media(large) {
+      margin-left: 47px;
+    }
   }
 
   &__item {
@@ -99,6 +116,10 @@
     box-shadow: 8px 10px 13px 4px #0000004d;
     filter: drop-shadow(2px 4px 6px black);
     transition: 0.3s ease;
+
+    @include media(large) {
+      width: 400px;
+    }
 
     &:hover {
       transition: 0.3s ease;
