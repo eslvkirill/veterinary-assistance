@@ -38,6 +38,7 @@
         list-style: none;
         position: relative;
         padding: 16px 55px 0;
+        transition: 0.3s ease;
 
         @include media(large-xl) {
           padding: 16px 35px 0;
@@ -47,25 +48,22 @@
           padding: 16px 20px 0;
         }
 
+        &:active {
+          transform: scale(0.95);
+          transition: 0.3s ease;
+        }
+
         a {
           text-decoration: none;
           text-shadow: 0 0 0 #be6037, 0 0 0 #9b4724, 0 0 0 #be6037;
           font-weight: bold;
           letter-spacing: 0.02rem;
-          transition: 0.3s ease;
           box-shadow: 1px 5px 10px -5px black;
           padding: 15px 41px;
           cursor: pointer;
-          background: #dbf7f8;
-          color: #bd5a31;
-
           background-color: #bd5a31;
           color: #fceddc;
-
-          &:active {
-            color: #dbf7f8;
-            transform: scale(0.9);
-          }
+          transition: 0.3s ease;
         }
 
         &:hover {
@@ -73,10 +71,11 @@
             background: #dbf7f8;
             color: #bd5a31;
             text-shadow: none;
+            transition: 0.3s ease;
 
             &:active {
-              color: #dbf7f8;
-              transform: scale(0.98);
+              color: #9c2f00;
+              transition: 0.3s ease;
             }
           }
         }
