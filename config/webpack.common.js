@@ -63,6 +63,14 @@ module.exports = {
           from: 'node_modules/@fortawesome/fontawesome-free/webfonts',
           to: 'webfonts',
         },
+        {
+          from: 'src/robots.txt',
+          to: '',
+        },
+        {
+          from: 'src/sitemap.xml',
+          to: '',
+        },
       ],
     }),
   ],
